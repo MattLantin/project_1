@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="styles.css"> 
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
-<title>Get in Touch</title>
+<title>Contact</title>
 <style type="text/css">
     html, body{height: 100%; margin: 0; overflow: hidden;}
     #content{height: 100%; box-sizing: border-box;}
@@ -18,24 +18,37 @@
     .contact_info a {color: inherit;}
     #contact_social_links a{display: inline-block; height: 5px; margin-top: 30px;}
     #contact_social_links a img{height: 25px;}
+    @media screen and (max-width: 700px) {
+    .layout{ grid-template-columns: auto;}
+    .details{margin: 20px auto 0px auto; text-align: center;}
+    .form{margin: 10px auto 0px auto;}
+}
+    @media screen and (max-width: 450px) {
+    .details{margin: 70px auto 0px auto}   
+    .details{text-align: center;}
+    html, body{overflow: scroll;}
+    .form{margin-bottom: 150px;}
+}
 </style>
+
 </head>
 
 <body>
     <div class="header">
-        <div><a href="index.html">Home</a></div>
-        <div><a href="meet_the_band.html">Meet the Artists</a></div>
-        <div><a href="events.html">Events</a></div>
-        <div id="contact"><a href="contact.html">Contact</a></div>
-    </div>
+		<div><a href="index.html">Home</a></div>
+		<div><a href="meet_the_band.html">Meet the Band</a></div>
+		<div><a href="events.html">Events</a></div>
+		<div id="contact"><a href="contact.html">Contact</a></div>
+        </div>
     <div id="content">
         <div class="background">
         <div class="layout">
             <div class="details">
-        <h2> Reach Out to Us</h2>
+
+        <h2> Contact Us</h2>
         <div class="contact_info">
-        Email: <a href="mailto:contact@musicgroup.com">contact@musicgroup.com</a></br>
-        Call or Text: <a href="tel:9876543210">987-654-3210</a>
+        Email: <a href="mailto:email@example.com">email@example.com</a></br>
+        Call or Text: <a href="tel:1234567890">123-456-7890</a>
         <div id="contact_social_links">    
             <a href='https://www.instagram.com' target="_blank"><img src='images/instagram.webp'></a>
             <a href='https://www.twitter.com' target="_blank"><img src='images/twitter.png'></a>
@@ -50,19 +63,19 @@
             <label>Email:</label><input type="text" name='email'></input>
             <label>Phone:</label><input type="text" name='phone'></input>
             <label>Message:</label><textarea id="message" type="text" name='message'></textarea>
-            <input id = "button" type = "submit" value = "Submit">
+            <input id = "button" type = "submit" value = "Send">
+
         </form>
     </div>
     </div>
     </div>
     <div class="footer">
-        <div><a href="tel:9876543210">987-654-3210</a></div>
+        <div><a href="tel:1234567890">123-456-7890</a></div>
         <div id="social_links">    
             <a href='https://www.instagram.com' target="_blank"><img src='images/instagram.webp'></a>
             <a href='https://www.twitter.com' target="_blank"><img src='images/twitter.png'></a>
             <a href='https://www.facebook.com' target="_blank"><img src='images/facebook.png'></a>
         </div>
-        <div><a href="mailto:contact@musicgroup.com">contact@musicgroup.com</a></div>
-    </div>
+        <div><a href="mailto:email@example.com">email@example.com</a></div>
+        </div>
 </body>
-</html>
