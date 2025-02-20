@@ -1,33 +1,39 @@
-body {font-family: 'Lora', serif; margin: 0; padding: 0; background-color: #f5f5f5; color: #333; line-height: 1.6;}
-#content {margin-top: 20px; padding-top: 50px; max-width: 1200px; margin: auto;}
-h2 {font-size: 34px; color: #222; font-weight: bold; text-align: center; padding-bottom: 10px; border-bottom: 2px solid #ddd;}
+body{font-family: Palatino, URW Palladio L, serif; margin: 0; padding: 0;}
+#content{margin-top: 10px; padding-top: 37px;}
+h2{font-size: 30px; color: inherit;}
 
 /* Header */
-.header {top: 0; background-color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; width: 100%; text-align: center; position: fixed; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); z-index: 1000;}
-.header > div {font-size: 18px; padding: 10px 25px; border-radius: 5px; transition: background 0.3s ease-in-out;}
-.header > div a {text-decoration: none; color: #444; font-weight: bold;}
-.header > div:hover {background-color: #e0e0e0; border-radius: 5px;}
-.header > div#contact {border: 2px solid #444; background-color: #ffcc00; padding: 10px 20px; font-weight: bold;}
-.header > div#contact:hover {background-color: #222; color: #fff; border: 2px solid #fff;}
+.header{top: 0; background-color: #fff; display: grid;grid-template-columns: auto auto auto auto; padding: 5px 20px; width: 100%;text-align: center; position: fixed; box-sizing: border-box; border-bottom: 1px solid #000;}
+.header > div {font-size: 20px; padding: 5px 40px; box-sizing:content-box;
+color: #000; text-align: center; border-radius: 5px;}
+.header > div a {text-decoration: none; color: inherit;}
+.header > div:hover {text-decoration: underline; text-shadow: 1px 0px 0px black;}	
+.header > div#contact{border: 1px solid #000; background-color: gold;}
+.header > div#contact:hover{border: 1px solid #fff; background-color: black; color: white;}
 @media screen and (max-width: 700px) {
-    .header {flex-direction: column; align-items: center;}
+    /* Two column header */
+    .header{ grid-template-columns: auto auto;}   
 }
 
 /* Footer */
-.footer {bottom: 0; background-color: #222; text-align: center; position: fixed; width: 100%; padding: 20px 0; display: flex; justify-content: space-evenly; align-items: center; box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);}
-.footer > div {font-size: 15px; color: #fff; padding: 5px 10px;}
-.footer > div a {text-decoration: none; color: inherit; transition: color 0.3s ease-in-out;}
-.footer > div a:hover {color: #ffcc00; text-decoration: underline;}
-.footer #social_links a {display: inline-block; margin: 0 12px;}
-.footer #social_links a img {height: 35px; transition: transform 0.3s ease-in-out;}
-.footer #social_links a img:hover {transform: scale(1.3);}
+.footer{bottom: 0; background-color: #333; text-align: center; position: fixed;  width: 100%; margin: 0; padding: 10px; display: grid; grid-template-columns: auto auto auto;}
+.footer > div {display: inline-block; font-size: 15px; padding: 5px 10px; box-sizing:border-box;
+    color: #fff; text-align: center;}
+.footer > div a {text-decoration: underline; color: inherit;}
+.footer > div#social_links a{display: inline-block; height: 5px;}
+.footer > div#social_links a img{height: 25px;}
 @media screen and (max-width: 450px) {
-    .footer {flex-direction: column; align-items: center;}
+    /* One column header and footer */
+    .header{ grid-template-columns: auto;}
+    .header > div {font-size: 17px;}
+    .footer{ grid-template-columns: auto;}
 }
 
-/* Image and Text Layout */
-.img_text {background-color: #fff; padding: 25px 0; text-align: center; color: #333; margin-bottom: 30px;}
-.img_text h2 {margin-bottom: 15px; font-size: 30px; color: #222;}
-.img_text div {display: inline-block; font-size: 20px; padding: 25px 35px; color: #000; background-color: #f0f0f0; text-align: center; width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);}
-.img_text .image {height: 420px; background-size: cover; object-fit: cover; border-radius: 10px;}
-.img_text .text {width: 45%; padding: 20px 30px; margin: 0 auto; min-width: 370px; max-width: 500px; text-align: left; line-height: 1.7;}
+/* Class for when an image and text go side by side */
+.img_text {background-color: white; height: auto;  width: 100%; padding: 0px 0px 15px 0px; box-sizing:border-box; text-align:center; color: #020000; margin: 0;}
+.img_text h2{margin-bottom: 0;}
+.img_text div {display: inline-block;font-size: 20px; padding: 25px 50px;
+     color: #000; background-color: #fff; text-align: center;  width: 100%; max-width: 450px;vertical-align: bottom; box-sizing: border-box; margin-top: 0;}
+.img_text .image {height: 400px;background-size:cover; object-fit: cover;}
+.img_text .text {width: 30%; padding: 0px 20px; margin: 0; min-width: 350px; max-width: 450px; text-align: left;}
+
